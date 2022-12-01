@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+    tools:context=".CartActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        app:title="Giỏ hàng"
+        android:background="@color/pink"
+        android:id="@+id/toolbarCartPage"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"/>
+    <LinearLayout
+        android:layout_weight="7"
+        android:layout_width="match_parent"
+        android:layout_height="0dp">
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <TextView
+                android:id="@+id/textCartEmpty"
+                android:gravity="center"
+                android:layout_gravity="center"
+                android:textSize="25dp"
+                android:text="Bạn chưa thêm sản phẩm nào vào giỏ hàng"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+            <ListView
+                android:id="@+id/listviewCart"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+        </FrameLayout>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_weight="3"
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_height="0dp">
+        <TextView
+            android:id="@+id/textSumPrice"
+            android:text="Tổng:"
+            android:textSize="20dp"
+            android:textColor="@color/red"
+            android:textStyle="bold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+        <Button
+            android:layout_margin="10dp"
+            android:id="@+id/buttonBuy"
+            android:layout_gravity="center"
+            android:text="Đặt mua sản phẩm"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+        <Button
+            android:layout_margin="10dp"
+            android:id="@+id/buttonChooseAnotherItem"
+            android:layout_gravity="center"
+            android:text="Tiếp tục chọn sản phẩm khác"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+    </LinearLayout>
+
+</LinearLayout>
